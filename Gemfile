@@ -30,3 +30,9 @@ group :development, :test do
    # gem 'webrat'
    gem 'rspec-rails', '~> 2.5'
 end
+
+group :test do
+   gem 'cucumber-rails'
+   gem 'capybara'
+   gem 'database_cleaner'
+end
