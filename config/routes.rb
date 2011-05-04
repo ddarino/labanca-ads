@@ -1,4 +1,6 @@
 LabancaAds::Application.routes.draw do
+  resources :advertisements
+
   get "pages/home"
 
   # get "pages/about"
@@ -7,7 +9,7 @@ LabancaAds::Application.routes.draw do
 
   resources :libros
 
-  match 'repite/(:frase)' => 'repite#index'
+  match 'repite/(:frase)', :to => 'repite#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
