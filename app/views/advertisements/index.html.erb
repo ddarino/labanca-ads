@@ -4,6 +4,8 @@
   <tr>
     <th>Title</th>
     <th>Body</th>
+    <th>Price</th>
+    <th>Vendedor</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +15,8 @@
   <tr>
     <td><%= advertisement.title %></td>
     <td><%= advertisement.body %></td>
+    <td><%= advertisement.price %></td>
+    <td><%= advertisement.user ? advertisement.user.first_name : 'NULL POINER EXCEPTION' %></td>
     <td><%= link_to 'Show', advertisement %></td>
     <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>
     <td><%= link_to 'Destroy', advertisement, :confirm => 'Are you sure?', :method => :delete %></td>

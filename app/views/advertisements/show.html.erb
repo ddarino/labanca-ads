@@ -11,5 +11,16 @@
 </p>
 
 
+<p>
+  <b>Price:</b>
+  <%= @advertisement.price %>
+</p>
+
+<p>
+  <b>Vendedors:</b>
+  <%= @advertisement.user.first_name if @advertisement.user %>
+</p>
+
+
 <%= link_to 'Edit', edit_advertisement_path(@advertisement) %> |
 <%= link_to 'Back', advertisements_path %>
