@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(:version => 20110504130052) do
     t.datetime "updated_at"
   end
 
+  create_table "autors", :force => true do |t|
+    t.string   "nombre"
+    t.date     "nacimiento"
+    t.integer  "libros_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "libros", :force => true do |t|
     t.string   "nombre"
     t.string   "isbn"
