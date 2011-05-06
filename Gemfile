@@ -5,7 +5,9 @@ gem 'rails', '3.0.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Gemas que necesita mi app
 gem 'sqlite3'
+gem 'devise', '~> 1.3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
