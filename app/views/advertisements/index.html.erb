@@ -16,10 +16,15 @@
     <td><%= advertisement.title %></td>
     <td><%= advertisement.body %></td>
     <td><%= advertisement.price %></td>
-    <td><%= advertisement.user ? advertisement.user.first_name : 'NULL POINER EXCEPTION' %></td>
+    <td><%= advertisement.user ? advertisement.user.first_name : '_desconocido_' %></td>
     <td><%= link_to 'Show', advertisement %></td>
-    <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>
-    <td><%= link_to 'Destroy', advertisement, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if user_signed_in? && current_user.id == advertisement.user.id %>
+      <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>
+      <td><%= link_to 'Destroy', advertisement, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% else %>
+      <td></td>
+      <td></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

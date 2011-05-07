@@ -1,5 +1,9 @@
-<span><%= advertisement.title %></span>
-<span><%= advertisement.body %></span>
-<span><%= advertisement.price %></span>
-<%= link_to 'Edit', edit_advertisement_path(advertisement) %>
+  <tr>
+    <td><%= advertisement.title %></td>
+    <td><%= advertisement.body %></td>
+    <td><%= advertisement.price %></td>
+    <td><%= link_to 'Show', advertisement %></td>
+    <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>
+    <td><%= link_to 'Destroy', advertisement, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
 <br>

@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20110506141916) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.decimal  "price"
+    t.decimal  "price",      :precision => 8, :scale => 2
   end
 
   create_table "libros", :force => true do |t|

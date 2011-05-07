@@ -1,7 +1,18 @@
-<h1>Users#dashboard</h1>
-<p>Find me in app/views/users/dashboard.html.erb</p>
-
-
 <h2>Mis Avisos</h2>
 
-<%= render current_user.advertisements %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+  <%= render current_user.advertisements %>
+</table>
+
+<p>
+  <%= link_to 'Avisos', advertisements_path %>
+</p>
