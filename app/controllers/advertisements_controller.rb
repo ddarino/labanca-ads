@@ -1,9 +1,8 @@
 class AdvertisementsController < ApplicationController
 
-  before_filter :authenticate_user!, :except => :index
+  before_filter :authenticate_user!, :except => [:index, :show]
 
   # GET /advertisements
-  # GET /advertisements.xml
   def index
     @advertisements = Advertisement.all
 

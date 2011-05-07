@@ -2,8 +2,15 @@
     <td><%= advertisement.title %></td>
     <td><%= advertisement.body %></td>
     <td><%= advertisement.price %></td>
+    <td><%= advertisement.user.first_name %></td>
     <td><%= link_to 'Show', advertisement %></td>
-    <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>
-    <td><%= link_to 'Destroy', advertisement, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    <%# Ahora hay que ver si es un usuario logueado, que parte muestro si es owner o no del ads %>
+    <% if user_signed_in? && current_user.id == advertisement.user.id %>
+      <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>
+      <td><%= link_to 'Destroy', advertisement, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% else %>
+      <td></td>
+      <td></td>
+    <% end %>
   </tr>
-<br>
